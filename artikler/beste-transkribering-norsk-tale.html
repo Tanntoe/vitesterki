@@ -25,7 +25,7 @@
   <div class="disclosure">Artikkelen inneholder <a href="../annonselenker.html">annonselenker</a>. Kjøper du via lenkene våre, får vi provisjon – uten at det koster deg noe ekstra eller påvirker konklusjonen.</div>
 
   <h1>Transkribering på norsk: vi testet 4 verktøy på ekte norsk tale</h1>
-  <p class="lede">Vi skrev et manus fullt av det maskiner sliter med – beløp, fakturanummer, norske egennavn, engelske låneord og et avsnitt på dialekt – leste det inn én gang, og kjørte den samme lydfilen gjennom fire verktøy. Med manuset som fasit kunne vi telle feilene i stedet for å gjette. Resultatet: ett verktøy ødela beløpet, ett ødela stedsnavnet, og ingen av dem taklet dialekt.</p>
+  <p class="lede">Vi skrev et manus fullt av det maskiner sliter med – beløp, fakturanummer, norske egennavn, engelske låneord og et avsnitt på vestlandsdialekt – leste det inn én gang, og kjørte den samme lydfilen gjennom fire verktøy. Med manuset som fasit kunne vi telle feilene i stedet for å gjette. Resultatet: ett verktøy ødela beløpet, ett ødela stedsnavnet, ingen av de kommersielle taklet dialekt – og det ene som gjorde det, slettet i stillhet 45 ord av teksten.</p>
 
   <h2>Slik testet vi</h2>
   <p>Ett opptak på 78 sekunder, tatt opp med mobil i et vanlig rom – ikke studio. Samme fil til alle fire verktøyene, ingen etterbehandling. Manuset inneholdt med vilje: et beløp lest ut i klartekst («to millioner fire hundre og trettifem tusen»), et fakturanummer lest siffer for siffer, en dato, de norske navnene Kjetil Bjørnstad og Ingvild Sæterøy, stedsnavnene Ålesund, Hjørundfjorden og Bryggen, låneordene deadline, workshop og onboarding, sammensatte ord som «kundeserviceløsningen» – og et siste avsnitt lest på vestlandsdialekt med nynorske former (eg, me, gler, veke, då, sjå, held, lovar).</p>
@@ -37,7 +37,7 @@
     <tr><td><strong>Happy Scribe</strong></td><td>≈ 2,6 %</td><td>Egennavn – traff alle</td><td>Ødela beløpet fullstendig</td></tr>
     <tr><td><strong>Notta</strong></td><td>≈ 3 %</td><td>Mest tro mot det som faktisk ble sagt</td><td>Gjør ikke om tall til siffer</td></tr>
     <tr><td><strong>Good Tape</strong></td><td>≈ 5 %</td><td>Tall og beløp – helt korrekt</td><td>Ødela stedsnavn og fornavn</td></tr>
-    <tr><td><strong>NB Whisper</strong></td><td>Ikke fullført</td><td>(norsk, gratis, åpen modell)</td><td>Krever utviklerverktøy – vi ga opp</td></tr>
+    <tr><td><strong>NB Whisper</strong></td><td>≈ 4 %</td><td>Eneste som mestret dialekt og nynorsk</td><td>58 min kjøretid – og slettet 45 ord uten varsel</td></tr>
   </table>
 
   <h2>Happy Scribe – best på navn, verst på tall</h2>
@@ -58,28 +58,35 @@
   <p>Dialektavsnittet ble testens verste: «noe eg gler meg til» ble til «noe som jeg <em>lærer</em> meg til», og «me skal prøve ut det nye systemet» ble til «vi skal prøve å <em>utda nye systemer</em>». Omtrent en tredjedel av ordene i avsnittet var feil.</p>
   <div class="verdict"><strong>Dom:</strong> Best for økonomimøter og alt der tall er viktigere enn navn. Les korrektur på hvert eneste egennavn.</div>
 
-  <h2>NB Whisper – trolig best på norsk, men vi kom aldri i mål</h2>
-  <p>Nasjonalbibliotekets NB Whisper er den eneste modellen i testen som er utviklet for norsk, med uttalt støtte for både bokmål, nynorsk og dialekter. Den er gratis og åpen. Vi ville veldig gjerne testet den – og klarte det ikke.</p>
-  <p>NB Whisper er en modell, ikke et produkt. Nasjonalbibliotekets nettdemo er merket som midlertidig og var nede da vi testet. Alternativet er å kjøre modellen selv, og der endte vi i Google Colab med 6,17 GB nedlasting. Etter 17 minutter hadde vi fortsatt ikke fått ut en eneste setning, og vi avbrøt. (Kjøringen gikk trolig på CPU; med GPU går det raskere – men det er nettopp poenget: du må vite hva det betyr.)</p>
-  <div class="verdict"><strong>Dom:</strong> Vi kan ikke bedømme kvaliteten, for vi fikk aldri en transkripsjon. Som <em>verktøy</em> for vanlige brukere: utilgjengelig. Er du utvikler, er dette trolig det beste norske alternativet som finnes – og det koster ingenting.</div>
+  <h2>NB Whisper – den eneste som kan dialekt, og den vanskeligste å bruke</h2>
+  <p>Nasjonalbibliotekets NB Whisper er den eneste modellen i testen som er utviklet for norsk, med uttalt støtte for bokmål, nynorsk og dialekter. Den er gratis og åpen. Den er også den eneste som ikke er et produkt: nettdemoen deres er merket som midlertidig og var nede da vi testet, så vi endte i Google Colab med 6,17 GB nedlasting. <strong>Total kjøretid: 3486 sekunder – 58 minutter for 78 sekunder lyd.</strong></p>
+  <p>Men den leverte noe ingen av de andre klarte. Kjørt i nynorsk-modus kom hele dialektavsnittet ut korrekt: <em>«litt om noko som eg gler meg til … i praksis neste veke. Då får vi sjå om det faktisk held det det lovar.»</em> Alle formene bevart – eg, gler, veke, då, sjå, held, lovar. Der de tre kommersielle verktøyene oversatte i stillhet, forsto denne modellen faktisk hva som ble sagt.</p>
+  <p>På bokmål havnet den på ca. 4 % feil, med beløpet (2 435 000), fakturanummeret (1042) og begge personnavnene riktig. Den var også eneste verktøy som fikk «har ansvaret for» helt korrekt. Feilene var av det pussige slaget: «kroner millioner», «workshopen<em>open</em>», «Hjørrundfjorden» med en ekstra r, og samme hallusinasjon som Notta – «i praksis» ble til «i praktisk praksis».</p>
+  <p><strong>Og så det alvorlige.</strong> I nynorsk-kjøringen forsvant en hel passasje: alt fra «Hjørundfjorden for befaring» til «bestillingssystemet» – rundt 45 ord – uten et eneste varsel. Teksten leser sømløst videre som om ingenting mangler. Stille utelatelse er den farligste feiltypen som finnes, fordi den ikke kan oppdages ved gjennomlesing; du må ha originalen for å se den.</p>
+  <p>En viktig nyanse til: NB Whisper <em>normaliserer</em> til målformen du velger. Manuset ble lest på bokmål, men nynorsk-modus skrev hele teksten om til nynorsk («velkomen», «førre kvartal», «framleis ikkje»). Den gjengir altså ikke ordrett det som ble sagt – den oversetter til valgt målform. For et møte der folk snakker om hverandre på begge målformer, finnes det ingen innstilling som er tro mot originalen.</p>
+  <div class="verdict"><strong>Dom:</strong> Teknisk sett testens beste norskforståelse, og den eneste reelle løsningen hvis du jobber med dialekt eller nynorsk. I praksis utilgjengelig for vanlige brukere, og med en feilmodus som kan slette innhold uten å si fra. Gratis – men du betaler i tid og årvåkenhet.</div>
 
-  <h2>Det ingen av dem klarte: dialekt og nynorsk</h2>
-  <p>Det tydeligste funnet i hele testen: <strong>alle tre kommersielle verktøyene oversatte dialektavsnittet til bokmål uten å si fra.</strong> Ingen av dem markerte usikkerhet, ingen av dem tilbød nynorsk som språkvalg. Feilprosenten i det avsnittet lå mellom 30 og 35 % for alle.</p>
+  <h2>Dialekt og nynorsk: de kommersielle verktøyene gir opp</h2>
+  <p>Det tydeligste funnet i hele testen: <strong>alle tre kommersielle verktøyene oversatte dialektavsnittet til bokmål uten å si fra.</strong> Ingen av dem markerte usikkerhet, ingen av dem tilbød nynorsk som språkvalg. Feilprosenten i det avsnittet lå mellom 30 og 35 % for alle tre. Good Tape gjorde «noko eg gler meg til» til «noe som jeg <em>lærer</em> meg til», og «me skal prøve ut det nye systemet» til «vi skal prøve å <em>utda nye systemer</em>».</p>
   <p>Snakker du, eller de du skal transkribere, dialekt – og det gjør de fleste nordmenn – er dette den viktigste begrensningen å kjenne til. Verktøyene lager en tekst som <em>ser</em> plausibel ut, men som kan ha endret meningen underveis. «Held det det lovar» som blir til «holder det de lover» er ikke en skrivefeil; det er en annen setning.</p>
+  <p>Bare NB Whisper klarte det – og den er ikke et produkt du bare kan ta i bruk. Det er den ubehagelige konklusjonen: teknologien for å transkribere norsk dialekt finnes, den er utviklet i Norge og den er gratis, men ingen har pakket den inn i noe vanlige folk kan bruke.</p>
 
   <h2>Konklusjon</h2>
-  <p>Det finnes ingen vinner som passer alle, og det er den ærlige konklusjonen: <strong>Happy Scribe</strong> hvis teksten er full av navn, <strong>Good Tape</strong> hvis den er full av tall, <strong>Notta</strong> hvis du vil ha det ordrett og formatere selv. Ingen av dem kan brukes ukorrekturlest på norsk – og ingen av dem bør brukes på dialekt hvis presisjon betyr noe.</p>
-  <p>Det norske gratisalternativet, NB Whisper, er trolig det teknisk beste – og samtidig det eneste vanlige folk ikke får brukt. Det sier ganske mye om hvor norsk språkteknologi står i 2026.</p>
+  <p>Det finnes ingen vinner som passer alle, og det er den ærlige konklusjonen: <strong>Happy Scribe</strong> hvis teksten er full av navn, <strong>Good Tape</strong> hvis den er full av tall, <strong>Notta</strong> hvis du vil ha det ordrett og formatere selv. Ingen av dem kan brukes ukorrekturlest på norsk.</p>
+  <p>Snakkes det dialekt eller nynorsk, er <strong>NB Whisper</strong> det eneste som faktisk fungerer – men du må gjennom Colab, 6 GB nedlasting og nesten en time kjøretid, og du må kontrollere at ingenting har falt ut underveis. Det er en løsning for den tålmodige, ikke for den travle.</p>
+  <p>Den største lærdommen: alle fire verktøyene produserer tekst som <em>ser</em> riktig ut. Feilene er ikke åpenbare rot – de er et beløp som ble til tull, et navn som ble til et annet navn, en setning som forsvant. Transkribering på norsk er i 2026 et utkast, ikke et referat. Du er fortsatt den som må lese korrektur.</p>
 
   <h2>Ofte stilte spørsmål</h2>
   <h3>Finnes det et verktøy som takler norsk dialekt?</h3>
-  <p>Ikke blant de kommersielle vi testet. NB Whisper er utviklet med dialektstøtte, men krever teknisk oppsett. Vi kommer tilbake til dette i en egen test.</p>
+  <p>Ja – men bare ett, og det er ikke et ferdig produkt. NB Whisper kjørt i nynorsk-modus gjenga dialektavsnittet vårt korrekt, ord for ord. De tre kommersielle verktøyene oversatte det til bokmål uten å varsle. Prisen for NB Whisper er teknisk oppsett i Colab og nesten en times kjøretid.</p>
+  <h3>Hvorfor ble teksten nynorsk når jeg snakket bokmål?</h3>
+  <p>Fordi NB Whisper normaliserer til målformen du velger, i stedet for å gjengi ordrett. Velger du nynorsk, får du nynorsk uansett hva som ble sagt. Det er greit å vite før du bruker den på et møte der begge målformer forekommer.</p>
   <h3>Er gratisnivåene nok?</h3>
   <p>Til korte opptak som vårt: ja. Alle tre kommersielle verktøyene lot oss teste uten å betale. Til jevnlig bruk må du regne med abonnement.</p>
   <h3>Hvor nøyaktig er «god nok» nøyaktighet?</h3>
   <p>Under 2 % feil er utmerket, 2–5 % er brukbart med korrekturlesing, over 10 % betyr at du bruker like lang tid på retting som du ville brukt på å skrive selv.</p>
 
-  <p class="tagline">Sist testet: august 2026. Samme lydfil til alle verktøy, gratisnivå der det fantes. Vi oppdaterer testen når verktøyene endrer seg vesentlig.</p>
+  <p class="tagline">Sist testet: august 2026. Samme lydfil (78 sekunder, tatt opp med mobil) til alle verktøy, gratisnivå der det fantes. NB Whisper Large ble kjørt via Google Colab, én gang i bokmåls-modus og én gang i nynorsk-modus. Vi oppdaterer testen når verktøyene endrer seg vesentlig.</p>
 
   <p><em>Les også:</em> <a href="beste-ki-verktoy-norsk-tekst.html">Beste KI-verktøy for å skrive norsk tekst (2026) – vi testet 4</a></p>
 
