@@ -14,8 +14,9 @@ når lesere kjøper abonnement via sporingslenkene våre.
 **Mål:** 100.000 kr i akkumulert inntekt. Realistisk horisont: 15–24 måneder.
 Hovedinntekten skal komme fra SaaS-verktøy med gjentakende provisjon (20–40 %).
 
-**Redaksjonell kjerneregel:** Vi publiserer aldri om et verktøy vi ikke har testet selv.
-Det er hele konkurransefortrinnet — konkurrentene publiserer uprøvd KI-generert innhold.
+**Redaksjonell kjerneregel:** Vi påstår aldri at vi har testet noe vi ikke har testet.
+Testede artikler er hele konkurransefortrinnet — konkurrentene publiserer uprøvd KI-generert innhold.
+Research-basert innhold (priser, guider, nyheter) er lov, men skal alltid merkes tydelig. Se punkt 9.
 
 ---
 
@@ -140,3 +141,40 @@ Han vil ikke ringe eller kontakte folk — all vekst skal skje gjennom publiseri
 - [ ] Søke på flere partnerprogrammer i Impact etter hvert som artikler publiseres
 - [ ] Fra ca. artikkel 8: LinkedIn-poster gjenbrukt fra publiserte funn
 - [ ] Fra ca. måned 6: engelsk versjon av vinnerartikler på datainthemaking.com
+
+---
+
+## 9. To innholdsspor (lagt til august 2026)
+
+Nettstedet har to typer innhold. **Blandingen må aldri viskes ut** — det er tilliten som er hele forretningsmodellen.
+
+### Spor A — testede artikler (2 i uka)
+Fasit-basert testing som beskrevet i punkt 4. Merkes «Vi har testet dette selv».
+Dette er moaten. Ingen påstand om testing uten faktisk testing — aldri, uansett tidspress.
+
+### Spor B — research-basert innhold (3–4 i uka)
+Ærlig, nyttig innhold som ikke krever at vi tester noe. **Skal alltid merkes tydelig øverst**
+med en `<div class="disclosure">` som sier hva det er, f.eks.
+«Dette er en prisoversikt, ikke en test. Tallene er hentet fra leverandørenes egne prissider i [måned år].»
+
+Godkjente formater i spor B:
+
+| Format | Kilde | Eksempel |
+|---|---|---|
+| **Prisguide** | Leverandørenes prissider | «Hva koster KI-verktøyene i Norge?» |
+| **Forklarende guide** | Faglig kunnskap, dokumentasjon | «Slik velger du transkriberingsverktøy» |
+| **Nyheter/lanseringer** | Leverandørens egne kunngjøringer | «Ny norsk språkstøtte i X» |
+| **Bruksguide** | Johannes' egen daglige bruk | «Slik får du bedre norsk ut av ChatGPT» |
+| **Regelverk/praktisk** | Lovtekst, Skatteetaten, Datatilsynet | «KI og GDPR for norske bedrifter» |
+| **Oppsummering av andres funn** | Navngitte, lenkede kilder | «Hva sier forskningen om KI og norsk?» |
+
+**Regler for spor B:**
+- Aldri skriv «vi testet» om noe vi ikke har testet.
+- Oppgi alltid kilde og dato. Priser og fakta forfaller raskt.
+- Norsk merverdi er poenget: omregn til kroner, legg til 25 % mva, forklar hva som gjelder i Norge.
+- Lenk alltid til minst én spor A-artikkel — det er der troverdigheten ligger.
+- Prisguider oppdateres **månedlig**. Oppdatert dato er både nyttig for leseren og god SEO.
+
+### Forsiden
+Overskriften er «Siste fra oss», ikke «Siste tester», nettopp fordi begge spor ligger der.
+Spor B-artikler får en `<div class="meta"><strong>Prisoversikt</strong> – ikke en test</div>`-merking i listen.
