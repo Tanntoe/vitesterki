@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transkribering på norsk: vi testet 4 verktøy på ekte norsk tale (2026) | Vi tester KI</title>
+<meta name="description" content="Vi leste inn samme manus og kjørte det gjennom Happy Scribe, Good Tape, Notta og NB Whisper. Én bommet på beløpet, én ødela stedsnavnet – og ingen taklet dialekt.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Vi tester <span>KI</span></a>
+    <nav>
+      <a href="../index.html">Tester</a>
+      <a href="../om.html">Om oss</a>
+      <a href="../annonselenker.html">Annonselenker</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="disclosure">Artikkelen inneholder <a href="../annonselenker.html">annonselenker</a>. Kjøper du via lenkene våre, får vi provisjon – uten at det koster deg noe ekstra eller påvirker konklusjonen.</div>
+
+  <h1>Transkribering på norsk: vi testet 4 verktøy på ekte norsk tale</h1>
+  <p class="lede">Vi skrev et manus fullt av det maskiner sliter med – beløp, fakturanummer, norske egennavn, engelske låneord og et avsnitt på dialekt – leste det inn én gang, og kjørte den samme lydfilen gjennom fire verktøy. Med manuset som fasit kunne vi telle feilene i stedet for å gjette. Resultatet: ett verktøy ødela beløpet, ett ødela stedsnavnet, og ingen av dem taklet dialekt.</p>
+
+  <h2>Slik testet vi</h2>
+  <p>Ett opptak på 78 sekunder, tatt opp med mobil i et vanlig rom – ikke studio. Samme fil til alle fire verktøyene, ingen etterbehandling. Manuset inneholdt med vilje: et beløp lest ut i klartekst («to millioner fire hundre og trettifem tusen»), et fakturanummer lest siffer for siffer, en dato, de norske navnene Kjetil Bjørnstad og Ingvild Sæterøy, stedsnavnene Ålesund, Hjørundfjorden og Bryggen, låneordene deadline, workshop og onboarding, sammensatte ord som «kundeserviceløsningen» – og et siste avsnitt lest på vestlandsdialekt med nynorske former (eg, me, gler, veke, då, sjå, held, lovar).</p>
+  <p>Vi teller feil på ordnivå mot manuset, og ser separat på bokmålsdelen og dialektavsnittet, fordi de forteller to helt forskjellige historier.</p>
+
+  <h2>Kort oppsummert</h2>
+  <table>
+    <tr><th>Verktøy</th><th>Feil (bokmål)</th><th>Sterkest på</th><th>Svakest på</th></tr>
+    <tr><td><strong>Happy Scribe</strong></td><td>≈ 2,6 %</td><td>Egennavn – traff alle</td><td>Ødela beløpet fullstendig</td></tr>
+    <tr><td><strong>Notta</strong></td><td>≈ 3 %</td><td>Mest tro mot det som faktisk ble sagt</td><td>Gjør ikke om tall til siffer</td></tr>
+    <tr><td><strong>Good Tape</strong></td><td>≈ 5 %</td><td>Tall og beløp – helt korrekt</td><td>Ødela stedsnavn og fornavn</td></tr>
+    <tr><td><strong>NB Whisper</strong></td><td>Ikke fullført</td><td>(norsk, gratis, åpen modell)</td><td>Krever utviklerverktøy – vi ga opp</td></tr>
+  </table>
+
+  <h2>Happy Scribe – best på navn, verst på tall</h2>
+  <p>Happy Scribe leverte den reneste teksten på bokmål, med ca. 2,6 % feil. Den var også eneste verktøy som samlet det oppleste fakturanummeret riktig: «ett null fire to» ble til <strong>1042</strong>. Alle egennavn overlevde – både Kjetil Bjørnstad, Ingvild Sæterøy, Ålesund, Hjørundfjorden og Bryggen – og sammensatte ord ble holdt samlet.</p>
+  <p>Men så kommer beløpet. «To millioner fire hundre og trettifem tusen kroner» ble til <strong>«2 000 435 0 kr»</strong>. Ikke bare feil, men meningsløst – og i et møtereferat med økonomi i er det den typen feil som kan forplante seg videre i et regneark. Vi fant også at den skrev «12,5 <strong>procent</strong>» – dansk/svensk skrivemåte som lekker inn i den norske modellen. Småfeil ellers: «onboardingen» ble til «onboarding», «bestillingssystemet» til «bestillingssystemer».</p>
+  <p>Dialektavsnittet ble stille oversatt til bokmål: eg→jeg, me→vi, gler→gleder, veke→uke, då→da, sjå→se. Verre: «om det faktisk <em>held det det lovar</em>» ble til «holder det <em>de</em> lover» – meningen endret seg. Happy Scribe tilbyr ikke nynorsk som språkvalg i det hele tatt, og varsler ikke om at den normaliserer.</p>
+  <div class="verdict"><strong>Dom:</strong> Best hvis teksten din er full av navn – intervjuer, referater med mange deltakere. Dobbeltsjekk alle tall før du bruker noe av det. <br><a href="https://happyscribe.sjv.io/c/7622866/3148390/39601" rel="sponsored">Prøv Happy Scribe her</a> <em>(annonselenke)</em></div>
+
+  <h2>Notta – mest tro mot det som ble sagt</h2>
+  <p>Notta var testens mest ordrette verktøy, med ca. 3 % feil på bokmål. Den fikk begge personnavnene riktig – Kjetil Bjørnstad <em>og</em> Ingvild Sæterøy – og holdt sammensatte ord som «kundeserviceløsningen» og «bestillingssystemet» hele. «Workshopen» ble stavet riktig, i motsetning til hos konkurrentene.</p>
+  <p>Særpreget: Notta gjør ikke om tall til siffer. «To millioner fire hundre og trettifem tusen» ble stående som ord, og fakturanummeret som «ett null fire to». Det er strengt tatt <em>ikke</em> en feil – det er nøyaktig det som ble sagt – men skal du bruke referatet til noe praktisk, må du skrive om alle tall selv. For ren tale er det en styrke; for møtereferater er det ekstraarbeid.</p>
+  <p>Feilene den gjorde: Hjørundfjorden ble til «Gjørundfjorden» (nær, men feil), og i dialektavsnittet dukket det opp en ren hallusinasjon – «i praksis» ble til «i <strong>praktisk praksis</strong>». Ellers normaliserte den dialekten til bokmål som de andre, men beholdt den vanskelige konstruksjonen «det det lover» korrekt.</p>
+  <div class="verdict"><strong>Dom:</strong> Velg denne når du vil ha ordrett gjengivelse og selv vil bestemme formateringen. Regn med å rydde i tall etterpå.</div>
+
+  <h2>Good Tape – best på tall, ødela navnene</h2>
+  <p>Good Tape var eneste verktøy som håndterte beløpet korrekt: <strong>2.435.000 kroner</strong>, akkurat slik det skal se ut i et referat. Den skrev «12,5 %» med riktig norsk «prosent», ga tidsstempler underveis, og beholdt talespråksformer som «klokka» og «held» i stedet for å normalisere dem bort.</p>
+  <p>Prisen for det var egennavnene. «Videre innover Hjørundfjorden» ble til <strong>«er vi der inne til Gjør rundt fjorden»</strong> – ren nonsens. Og <strong>Ingvild Sæterøy ble til Ingrid Sæterøy</strong>: en feil som er farlig nettopp fordi den ser riktig ut. Feiler et navn så subtilt, oppdager du det ikke ved gjennomlesing. I tillegg: «Fakturenummer» feilstavet, «kundeservice løsningen» splittet i to, «bryggen» med liten forbokstav.</p>
+  <p>Dialektavsnittet ble testens verste: «noe eg gler meg til» ble til «noe som jeg <em>lærer</em> meg til», og «me skal prøve ut det nye systemet» ble til «vi skal prøve å <em>utda nye systemer</em>». Omtrent en tredjedel av ordene i avsnittet var feil.</p>
+  <div class="verdict"><strong>Dom:</strong> Best for økonomimøter og alt der tall er viktigere enn navn. Les korrektur på hvert eneste egennavn.</div>
+
+  <h2>NB Whisper – trolig best på norsk, men vi kom aldri i mål</h2>
+  <p>Nasjonalbibliotekets NB Whisper er den eneste modellen i testen som er utviklet for norsk, med uttalt støtte for både bokmål, nynorsk og dialekter. Den er gratis og åpen. Vi ville veldig gjerne testet den – og klarte det ikke.</p>
+  <p>NB Whisper er en modell, ikke et produkt. Nasjonalbibliotekets nettdemo er merket som midlertidig og var nede da vi testet. Alternativet er å kjøre modellen selv, og der endte vi i Google Colab med 6,17 GB nedlasting. Etter 17 minutter hadde vi fortsatt ikke fått ut en eneste setning, og vi avbrøt. (Kjøringen gikk trolig på CPU; med GPU går det raskere – men det er nettopp poenget: du må vite hva det betyr.)</p>
+  <div class="verdict"><strong>Dom:</strong> Vi kan ikke bedømme kvaliteten, for vi fikk aldri en transkripsjon. Som <em>verktøy</em> for vanlige brukere: utilgjengelig. Er du utvikler, er dette trolig det beste norske alternativet som finnes – og det koster ingenting.</div>
+
+  <h2>Det ingen av dem klarte: dialekt og nynorsk</h2>
+  <p>Det tydeligste funnet i hele testen: <strong>alle tre kommersielle verktøyene oversatte dialektavsnittet til bokmål uten å si fra.</strong> Ingen av dem markerte usikkerhet, ingen av dem tilbød nynorsk som språkvalg. Feilprosenten i det avsnittet lå mellom 30 og 35 % for alle.</p>
+  <p>Snakker du, eller de du skal transkribere, dialekt – og det gjør de fleste nordmenn – er dette den viktigste begrensningen å kjenne til. Verktøyene lager en tekst som <em>ser</em> plausibel ut, men som kan ha endret meningen underveis. «Held det det lovar» som blir til «holder det de lover» er ikke en skrivefeil; det er en annen setning.</p>
+
+  <h2>Konklusjon</h2>
+  <p>Det finnes ingen vinner som passer alle, og det er den ærlige konklusjonen: <strong>Happy Scribe</strong> hvis teksten er full av navn, <strong>Good Tape</strong> hvis den er full av tall, <strong>Notta</strong> hvis du vil ha det ordrett og formatere selv. Ingen av dem kan brukes ukorrekturlest på norsk – og ingen av dem bør brukes på dialekt hvis presisjon betyr noe.</p>
+  <p>Det norske gratisalternativet, NB Whisper, er trolig det teknisk beste – og samtidig det eneste vanlige folk ikke får brukt. Det sier ganske mye om hvor norsk språkteknologi står i 2026.</p>
+
+  <h2>Ofte stilte spørsmål</h2>
+  <h3>Finnes det et verktøy som takler norsk dialekt?</h3>
+  <p>Ikke blant de kommersielle vi testet. NB Whisper er utviklet med dialektstøtte, men krever teknisk oppsett. Vi kommer tilbake til dette i en egen test.</p>
+  <h3>Er gratisnivåene nok?</h3>
+  <p>Til korte opptak som vårt: ja. Alle tre kommersielle verktøyene lot oss teste uten å betale. Til jevnlig bruk må du regne med abonnement.</p>
+  <h3>Hvor nøyaktig er «god nok» nøyaktighet?</h3>
+  <p>Under 2 % feil er utmerket, 2–5 % er brukbart med korrekturlesing, over 10 % betyr at du bruker like lang tid på retting som du ville brukt på å skrive selv.</p>
+
+  <p class="tagline">Sist testet: august 2026. Samme lydfil til alle verktøy, gratisnivå der det fantes. Vi oppdaterer testen når verktøyene endrer seg vesentlig.</p>
+
+  <p><em>Les også:</em> <a href="beste-ki-verktoy-norsk-tekst.html">Beste KI-verktøy for å skrive norsk tekst (2026) – vi testet 4</a></p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Vi tester KI</strong> · Ærlige tester av KI-verktøy, på norsk.</p>
+    <p>Noen lenker på dette nettstedet er <a href="../annonselenker.html">annonselenker</a>. De koster deg ingenting, men gjør at vi kan fortsette å teste.</p>
+  </div>
+</footer>
+
+</body>
+</html>
